@@ -1,0 +1,2 @@
+# seo-blog
+SEO BLOG POST POWERED BY GENESIS
