@@ -29,3 +29,5 @@ highlighter: rouge
 # Include these directories in build
 include:
   - _posts
+  
+future: true
