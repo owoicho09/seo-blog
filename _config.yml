@@ -2,7 +2,7 @@ title: Genesis Blog
 description: Auto-generated SEO blog posts powered by Genesis AI
 baseurl: "" # Leave blank for user.github.io/seo-blog
 url: "https://owoicho09.github.io" # Base domain
-
+permalink: /:year/:month/:day/:title/
 theme: minima
 
 # Enable plugins (GitHub Pages safe ones)
