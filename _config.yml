@@ -1,33 +1,18 @@
 title: Genesis Blog
 description: Auto-generated SEO blog posts powered by Genesis AI
-baseurl: "" # Leave blank for user.github.io/seo-blog
-url: "https://owoicho09.github.io" # Base domain
+baseurl: "/seo-blog"
+url: "https://owoicho09.github.io"
 permalink: /:year/:month/:day/:title/
-theme: minima
 
-# Enable plugins (GitHub Pages safe ones)
+theme: null  # You're using local layouts now
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# SEO + Sitemap enhancements
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: post
-      author: Genesis SEO Bot
-      sitemap:
-        priority: 0.8
-        changefreq: weekly
-
 markdown: kramdown
 highlighter: rouge
 
-# Include these directories in build
 include:
   - _posts
-  
-future: true
