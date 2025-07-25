@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Welcome to the Genesis Blog
-description: Discover answers ti questions you're asking.
+description: Discover answers to questions you're asking.
 ---
 
 # ✨ Latest Blog Posts
