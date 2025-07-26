@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://owoicho09.github.io/seo-blog/sitemap.xml
