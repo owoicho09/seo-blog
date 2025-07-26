@@ -4,7 +4,10 @@ baseurl: "/seo-blog"
 url: "https://owoicho09.github.io"
 permalink: /:year/:month/:day/:title/
 
-theme: null  # You're using local layouts now
+paginate: 10
+paginate_path: "/page:num"
+
+theme: null  # you're using local layouts now
 
 plugins:
   - jekyll-feed
@@ -14,5 +17,17 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 include:
+  - _pages
   - _posts
