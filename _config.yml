@@ -32,6 +32,5 @@ include:
   - _pages
   - _posts
 exclude:
-  - _posts
   - README.md
   - .gitignore
