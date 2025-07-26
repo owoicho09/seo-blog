@@ -1,36 +1,55 @@
 ---
 layout: default
+title: "Genesis SEO Blog - AI-Powered Marketing & Automation Tips"
+description: "Explore expert insights, tools, and tutorials on SEO, AI-powered content creation, automation strategies, and niche marketing — built for creators, coaches, and growth hackers."
 ---
 
 <main class="main-content fadeInDown delay_075s">
 
+  <section class="intro-section">
+    <h1>Welcome to the Genesis SEO Blog</h1>
+    <p>We share actionable guides, AI automation tutorials, and SEO strategies to help digital creators, fitness coaches, and marketers grow faster using AI. Every post is crafted with real-world use in mind — no fluff, just smart tools and proven tactics.</p>
+  </section>
+
+  <hr />
+
   {% for post in paginator.posts %}
   <article class="post">
     <header class="post-header">
-      <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{post.date | date: "%B %-d, %Y" }}</time>
-      <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a></h2>
+      <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      <h2 class="post-title">
+        <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+      </h2>
       <div class="post-meta">
-        By <span class="post-author">{{ site.data.author.name }}</span>{% if post.tags.size > 0 %}<span
-          class="post-tags"> in
-          {% for tag in post.tags %}<a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>{% endif %}
-      </div><!-- .post-meta -->
+        By <span class="post-author">{{ site.data.author.name }}</span>
+        {% if post.tags.size > 0 %}
+        <span class="post-tags"> in
+          {% for tag in post.tags %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag | cgi_escape }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
       {% if post.feature_image and post.feature_image != "" %}
       <figure class="post-thumbnail image-card width-wide">
-        <a href="{{site.baseurl}}{{post.url}}"><img src="{{ post.feature_image | relative_url }}"
-            alt="{{ post.title }}"></a>
-      </figure><!-- .post-thumbnail -->
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          <img src="{{ post.feature_image | relative_url }}" alt="{{ post.title }}">
+        </a>
+      </figure>
       {% endif %}
-    </header><!-- .post-header -->
+    </header>
+
     <div class="post-content">
       {% if post.content contains '<!--more-->' %}
-      {{ post.content | split:'<!--more-->' | first }}
-      <p class="read-more"><a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading &rarr;</a>
+      {{ post.content | split: '<!--more-->' | first }}
+      <p class="read-more">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading &rarr;</a>
       </p>
       {% else %}
       {{ post.content }}
       {% endif %}
-    </div><!-- .post-content -->
-  </article><!-- .post -->
+    </div>
+  </article>
   {% endfor %}
 
   {% if paginator.total_pages > 1 %}
@@ -45,7 +64,7 @@ layout: default
       <a href="{{ paginator.next_page_path | relative_url }}" class="older-posts">Older Posts &rarr;</a>
       {% endif %}
     </div>
-  </nav><!-- .pagination -->
+  </nav>
   {% endif %}
 
-</main><!-- .site-main -->
+</main>
