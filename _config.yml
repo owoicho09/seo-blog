@@ -28,6 +28,9 @@ defaults:
     values:
       layout: post
 
-include:
-  - _pages
+include: []
+
+exclude:
   - _posts
+  - README.md
+  - .gitignore
